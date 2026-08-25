@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const sendEmail = require('../utils/sendEmail');
 const { OAuth2Client } = require('google-auth-library');
 
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID || '116687564886-k24dv1d00dusk019s5a7p0tcop4mci6j.apps.googleusercontent.com');
+const client = new OAuth2Client('116687564886-k24dv1d00dusk019s5a7p0tcop4mci6j.apps.googleusercontent.com');
 
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
