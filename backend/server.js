@@ -38,7 +38,7 @@ app.use('/api/privacy', require('./routes/privacyRoutes'));
 app.use('/api/unsafe-areas', require('./routes/unsafeAreaRoutes'));
 
 app.get('/', (req, res) => {
-  res.send('SafeHer API is running...');
+  res.send('SHEVORA API is running...');
 });
 
 // Socket.io for Real-time location tracking
