@@ -213,7 +213,7 @@ const googleAuth = async (req, res) => {
     // Verify Google ID token
     const ticket = await client.verifyIdToken({
         idToken,
-        // audience: process.env.GOOGLE_CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
+        audience: '116687564886-k24dv1d00dusk019s5a7p0tcop4mci6j.apps.googleusercontent.com', 
     });
     
     const payload = ticket.getPayload();
@@ -263,7 +263,7 @@ const googleAuth = async (req, res) => {
     }
   } catch (error) {
     console.error("Google Auth Error:", error);
-    res.status(401).json({ message: 'Invalid Google token' });
+    res.status(401).json({ message: 'Google Auth Error: ' + error.message });
   }
 };
 
